@@ -3,23 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f6f1">
   <meta name="theme-color" content="#082318">
   <meta name="description" content="Vertel Osama over je website-idee. Vraag vrijblijvend een website op maat aan.">
   <title>Websites op maat | Osama</title>
   <style>
     :root {
-      --paper:#f6f6f1;
-      --white:#fff;
       --paper:#f7f6ef;
       --white:#fffefa;
       --ink:#17221c;
       --muted:#68736c;
-      --line:#e4e8e0;
-      --green:#225c43;
-      --green-dark:#194832;
-      --lime:#d4f078;
-      --soft-green:#edf3e9;
       --line:#e7e2d4;
       --green:#173c2d;
       --green-dark:#102b20;
@@ -32,9 +24,6 @@
     }
 
     body[data-theme="dark"] {
-      --paper:#101713; --white:#17231c; --ink:#edf4ee; --muted:#a9b7ad; --line:#2b3b30;
-      --green:#8ccaa3; --green-dark:#a4dfb8; --lime:#d4f078; --soft-green:#24382b;
-      --shadow:0 18px 55px rgba(0,0,0,.28); --surface:#17231c; --input:#111a15;
       --paper:#082318; --white:#103523; --ink:#f6efd9; --muted:#c2c1ad; --line:#36513c;
       --green:#d5b45c; --green-dark:#efcd73; --lime:#dbbb65; --soft-green:#173a28;
       --shadow:0 18px 55px rgba(0,0,0,.3); --surface:#103523; --input:#0b291b;
@@ -58,7 +47,6 @@
     body[data-theme="dark"] .mock-site { background:#202a23; }
     body[data-theme="dark"] .mock-lines i { background:#445148; }
     body[data-theme="dark"] .blob { background:#1d3023; }
-    body[data-theme="dark"] .instagram-icon { background:var(--surface); border-color:var(--line); }
     body[data-theme="dark"] .instagram-icon { background:#263329; border-color:#8e753d; color:#e0bd67; }
     body[data-theme="dark"] .instagram-link { background:#1d2a21; border-color:#9b7d3b; color:#f0d17a; }
     body[data-theme="dark"] .instagram-link:hover { background:#28382c; }
@@ -75,7 +63,6 @@
     button,input,select,textarea { font:inherit; }
     a { color:inherit; }
     .wrap { width:min(1120px,calc(100% - 48px)); margin-inline:auto; }
-    .topbar { display:flex; align-items:center; justify-content:space-between; min-height:78px; }
     .topbar { display:flex; align-items:center; justify-content:space-between; min-height:104px; }
 
     .brand {
@@ -87,15 +74,6 @@
       font-weight:850;
       letter-spacing:-.04em;
       text-decoration:none;
-    }
-    .brand-mark {
-      display:grid;
-      width:35px;
-      height:35px;
-      place-items:center;
-      border-radius:12px;
-      background:var(--green);
-      color:#fff;
     }
     .brand span { color:#d8b85c; font-family:Georgia, "Times New Roman", serif; font-size:19px; font-weight:700; letter-spacing:.16em; white-space:nowrap; }
     .nav { display:flex; align-items:center; gap:14px; font-size:13px; font-weight:650; }
@@ -167,30 +145,15 @@
       border:0;
       border-radius:999px;
       background:var(--green);
-      color:#fff;
       color:#102b20;
       font-size:14px;
-      font-weight:750;
       font-weight:800;
       text-decoration:none;
       cursor:pointer;
       transition:transform .18s ease,background .18s ease;
     }
-    .button:hover { background:var(--green-dark); transform:translateY(-2px); }
     .button:hover { background:var(--green-dark); color:#102b20; transform:translateY(-2px); }
     .text-link { color:var(--green); font-size:14px; font-weight:750; text-decoration:none; }
-    .instagram-link { display:inline-flex; align-items:center; gap:8px; color:var(--green); font-size:13px; font-weight:750; text-decoration:none; }
-    .instagram-link:hover { color:var(--green-dark); }
-    .instagram-icon {
-      display:grid;
-      width:29px;
-      height:29px;
-      place-items:center;
-      border:1px solid var(--line);
-      border-radius:9px;
-      background:#fff;
-      font-size:18px;
-    }
     .instagram-link { display:inline-flex; min-height:56px; align-items:center; gap:12px; padding:8px 21px 8px 11px; border:1px solid #d0ad59; border-radius:999px; background:#fffdf6; color:#173c2d; font-size:16px; font-weight:850; text-decoration:none; box-shadow:0 8px 24px #84651c22; transition:transform .18s ease,background .18s ease,box-shadow .18s ease; }
     .instagram-link:hover { transform:translateY(-2px); background:#f7efda; box-shadow:0 10px 24px #84651c26; }
     .instagram-icon { display:grid; width:40px; height:40px; place-items:center; border:1px solid #d8bd75; border-radius:50%; background:#f5edda; color:#795b19; font-size:21px; }
@@ -420,20 +383,17 @@
     }
     @media(max-width:600px) {
       .wrap { width:calc(100% - 34px); }
-      .topbar { min-height:68px; }
       .topbar { min-height:80px; }
       .nav { gap:8px; }
       .nav>a:first-child,.nav>a:nth-child(2) { display:none; }
       .nav-cta { padding:9px 11px; }
       .theme-toggle { width:38px; height:38px; }
-      .language { max-width:130px; }
       .language { max-width:105px; }
       .brand span { font-size:14px; letter-spacing:.1em; }
       .hero { display:flex; flex-direction:column; align-items:stretch; padding:40px 0 32px; }
       h1 { font-size:clamp(46px,14vw,66px); }
       .hero-copy>p { font-size:15px; }
       .hero-actions { gap:14px; }
-      .instagram-link { width:100%; }
       .instagram-link { width:auto; min-width:210px; justify-content:center; }
       .hero-art { min-height:315px; }
       .blob { width:285px; }
@@ -466,12 +426,8 @@
     }
   </style>
 </head>
-<body>
 <body data-theme="dark">
   <header class="wrap topbar">
-    <a class="brand" href="#" aria-label="Osama">
-      <span class="brand-mark">O</span>
-      <span>Osama<span style="color:#78916c">.</span></span>
     <a class="brand" href="#" aria-label="Osama Makes home">
       <span>OSAMA MAKES</span>
     </a>
@@ -729,7 +685,6 @@
   </main>
 
   <footer class="wrap footer">
-    <span><strong>Osama.</strong> <span data-i18n="footerText">Websites op maat, met aandacht gemaakt.</span></span>
     <span data-i18n="footerText">Websites op maat, met aandacht gemaakt.</span>
     <span>© <span id="year"></span> Osama</span>
   </footer>
@@ -1041,12 +996,10 @@
       themeToggle.setAttribute("aria-label", isDark ? t.themeLight : t.themeDark);
       themeToggle.title = isDark ? t.themeLight : t.themeDark;
       document.querySelector("meta[name=theme-color]").content = isDark ? "#101713" : "#f6f6f1";
-      try { localStorage.setItem("osama-site-theme", theme); } catch (error) {}
       try { localStorage.setItem("osama-site-theme-v2", theme); } catch (error) {}
     }
     let initialTheme = "light";
     try {
-      initialTheme = localStorage.getItem("osama-site-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
       initialTheme = localStorage.getItem("osama-site-theme-v2") || "dark";
     } catch (error) {}
     applyTheme(initialTheme);
@@ -1073,3 +1026,4 @@
   </script>
 </body>
 </html>
+
